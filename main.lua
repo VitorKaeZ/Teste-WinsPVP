@@ -1,6 +1,3 @@
-local json = require "json"
-
-
 local teams = {
     ['blue'] = {
         players = {}
