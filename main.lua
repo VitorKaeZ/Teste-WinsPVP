@@ -42,8 +42,6 @@ local function printTeams(teams)
 end
 
 
--- Chama a função para criar times
 createTeams(Queue)
 
--- Chama a função para exibir os times formados
 printTeams(teams)
