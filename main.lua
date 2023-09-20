@@ -7,25 +7,24 @@ local teams = {
     },
 }
 
+
 local function createTeams(groups)
     for index, team in pairs(teams) do
-        local players = #teams[index].players < 5
-        while players do
-            print(players)
-            for gName, group in ipairs(groups) do
-                if 5 - #teams[index].players >= #group.players then
-                    for _, player in ipairs(group.players) do
+        -- while #teams[index].players < 5 do
+        while #teams[index].players < 5 do
+            for gName, group in pairs(groups) do
+                if #group.players <= (5 - #teams[index].players) then
+                    for i, player in pairs(groups[gName].players) do
                         local playerData = {
                             id = player.id,
                             name = player.name,
                             group = gName
                         }
                         table.insert(teams[index].players, playerData)
-                        table.remove(groups[gName].players, 1)
+                        groups[gName].players[i] = nil
                     end
                 end
             end
-            players = #teams[index].players < 5
         end
     end
 
