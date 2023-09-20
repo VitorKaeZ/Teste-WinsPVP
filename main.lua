@@ -27,22 +27,6 @@ local function createTeams(groups)
             end
         end
     end
-
-    -- for gName, group in pairs(groups) do
-    --     for i, team in pairs(teams) do
-    --         if 5 - #team.players >= #group.players then
-    --             for index, player in pairs(group.players) do
-    --                 local playerData = {
-    --                     id = player.id,
-    --                     name = player.name,
-    --                     group = gName
-    --                 }
-    --                 table.insert(teams[i].players, playerData)
-    --                 table.remove(group.players, index)
-    --             end
-    --         end
-    --     end
-    -- end
 end
 
 
